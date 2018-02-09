@@ -371,7 +371,8 @@ class Fireball extends Actor {
   // Принимает один аргумент, время, число. Аргумент необязательный, по умолчанию равен 1.
     // Создает и возвращает вектор Vector следующей позиции шаровой молнии.
     // новая позиция — это текущая позиция плюс скорость, умноженная на время. И так по каждой из осей.
-    return new Vector(this.pos.x+this.speed.x*time,this.pos.y+this.speed.y*time);
+    // return new Vector(this.pos.x+this.speed.x*time,this.pos.y+this.speed.y*time);
+    return this.pos.plus(this.speed.times(time));
   }
 
   handleObstacle(){
